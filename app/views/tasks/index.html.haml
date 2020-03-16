@@ -2,7 +2,7 @@
   %a.navbar-brand 登録済みタスク一覧
 
 .form-wrapper
-  = form_for @task, html: {class: 'form-group'} do |f|
+  = form_with model: @task, html: {class: 'form-group'}, local: :true do |f|
 
     = f.label :kind
     = f.select :kind, [0, 1, 2], {}, class: 'form-control', placeholder: 0
